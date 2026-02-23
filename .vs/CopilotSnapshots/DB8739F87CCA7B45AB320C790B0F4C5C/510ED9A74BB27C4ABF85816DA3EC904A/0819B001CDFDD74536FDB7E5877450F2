@@ -1,0 +1,116 @@
+﻿using API.DTOs.Categories;
+using API.Entities.Oltp;
+using API.Repositories.Interfaces;
+using API.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+namespace API.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CategoriesController : ControllerBase
+    {
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IImageService _imageService;
+
+        public CategoriesController(IUnitOfWork unitOfWork, IImageService imageService)
+        {
+            _unitOfWork = unitOfWork;
+            _imageService = imageService;
+        }
+
+        /// <summary>
+        /// Récupérer toutes les catégories
+        /// </summary>
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<CategoryDto>>> GetAll()
+        {
+            var categories = await _unitOfWork.Categories.GetAllAsync();
+            var products = await _unitOfWork.Products.GetAllAsync();
+
+            var dtos = categories.Select(c => new CategoryDto
+            {
+                CategoryId = c.CategoryId,
+                Name = c.Name,
+                Description = c.Description,
+                ImageUrl = c.ImageUrl,
+                ProductCount = products.Count(p => p.CategoryId == c.CategoryId)
+            });
+
+            return Ok(dtos);
+        }
+
+        /// <summary>
+        /// Récupérer une catégorie par ID
+        /// </summary>
+        [HttpGet("{id}")]
+        public async Task<ActionResult<CategoryDto>> GetById(int id)
+        {
+            var category = await _unitOfWork.Categories.GetByIdAsync(id);
+            if (category == null)
+                return NotFound(new { message = "Catégorie non trouvée." });
+
+            var products = await _unitOfWork.Products.GetProductsByCategoryAsync(id);
+
+            return Ok(new CategoryDto
+            {
+                CategoryId = category.CategoryId,
+                Name = category.Name,
+                Description = category.Description,
+                ImageUrl = category.ImageUrl,
+                ProductCount = products.Count()
+            });
+        }
+
+        /// <summary>
+        /// Créer une catégorie (Admin uniquement)
+        /// </summary>
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult<CategoryDto>> Create([FromForm] CreateCategoryDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var imageUrl = await _imageService.SaveImageAsync(dto.Image, "categories");
+
+            var category = new Category
+            {
+                Name = dto.Name,
+                Description = dto.Description,
+                ImageUrl = imageUrl
+            };
+
+            await _unitOfWork.Categories.AddAsync(category);
+            await _unitOfWork.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetById), new { id = category.CategoryId }, new CategoryDto
+            {
+                CategoryId = category.CategoryId,
+                Name = category.Name,
+                Description = category.Description,
+                ImageUrl = category.ImageUrl,
+                ProductCount = 0
+            });
+        }
+
+        /// <summary>
+        /// Supprimer une catégorie (Admin uniquement)
+        /// </summary>
+        [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var category = await _unitOfWork.Categories.GetByIdAsync(id);
+            if (category == null)
+                return NotFound(new { message = "Catégorie non trouvée." });
+
+            _imageService.DeleteImage(category.ImageUrl);
+            _unitOfWork.Categories.Delete(category);
+            await _unitOfWork.SaveChangesAsync();
+
+            return NoContent();
+        }
+    }
+}

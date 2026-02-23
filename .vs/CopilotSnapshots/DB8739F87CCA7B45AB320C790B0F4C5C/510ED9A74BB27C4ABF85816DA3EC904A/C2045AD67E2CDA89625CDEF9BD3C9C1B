@@ -1,0 +1,163 @@
+﻿using API.Data;
+using API.DTOs.Auth;
+using API.Entities.Oltp;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Text;
+
+namespace API.Services
+{
+    public class AuthService : IAuthService
+    {
+        private readonly OltpDbContext _context;
+        private readonly IConfiguration _configuration;
+
+        public AuthService(OltpDbContext context, IConfiguration configuration)
+        {
+            _context = context;
+            _configuration = configuration;
+        }
+
+        public async Task<AuthResponseDto?> RegisterAsync(RegisterDto registerDto)
+        {
+            // Vérifier si l'email existe déjà
+            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == registerDto.Email);
+            if (existingUser != null)
+                return null;
+
+            // Hachage du mot de passe "from scratch"
+            CreatePasswordHash(registerDto.Password, out string passwordHash, out string passwordSalt);
+
+            var user = new User
+            {
+                FirstName = registerDto.FirstName,
+                LastName = registerDto.LastName,
+                Email = registerDto.Email,
+                PhoneNumber = registerDto.PhoneNumber,
+                Address = registerDto.Address,
+                City = registerDto.City,
+                DateOfBirth = registerDto.DateOfBirth,
+                PasswordHash = passwordHash,
+                PasswordSalt = passwordSalt,
+                Role = registerDto.Role,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+
+            // Générer le token JWT
+            var token = GenerateJwtToken(user);
+            var expiration = DateTime.UtcNow.AddMinutes(
+                double.Parse(_configuration["JwtSettings:ExpirationInMinutes"]!));
+
+            return new AuthResponseDto
+            {
+                Token = token,
+                UserId = user.UserId,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                FullName = user.FullName,
+                Email = user.Email,
+                PhoneNumber = user.PhoneNumber,
+                Address = user.Address,
+                City = user.City,
+                Role = user.Role,
+                ProfileImageUrl = user.ProfileImageUrl,
+                CompanyId = user.CompanyId,
+                Expiration = expiration
+            };
+        }
+
+        public async Task<AuthResponseDto?> LoginAsync(LoginDto loginDto)
+        {
+            var user = await _context.Users
+                .Include(u => u.Company)
+                .FirstOrDefaultAsync(u => u.Email == loginDto.Email);
+            if (user == null)
+                return null;
+
+            // Vérifier le mot de passe
+            if (!VerifyPasswordHash(loginDto.Password, user.PasswordHash, user.PasswordSalt))
+                return null;
+
+            // Générer le token JWT
+            var token = GenerateJwtToken(user);
+            var expiration = DateTime.UtcNow.AddMinutes(
+                double.Parse(_configuration["JwtSettings:ExpirationInMinutes"]!));
+
+            return new AuthResponseDto
+            {
+                Token = token,
+                UserId = user.UserId,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                FullName = user.FullName,
+                Email = user.Email,
+                PhoneNumber = user.PhoneNumber,
+                Address = user.Address,
+                City = user.City,
+                Role = user.Role,
+                ProfileImageUrl = user.ProfileImageUrl,
+                CompanyId = user.CompanyId,
+                CompanyName = user.Company?.Name,
+                Expiration = expiration
+            };
+        }
+
+        // ==================== Méthodes privées ====================
+
+        private string GenerateJwtToken(User user)
+        {
+            var jwtSettings = _configuration.GetSection("JwtSettings");
+            var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["SecretKey"]!));
+            var credentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
+
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
+                new Claim(ClaimTypes.Name, user.FullName),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Role, user.Role),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            };
+
+            if (user.CompanyId.HasValue)
+                claims.Add(new Claim("CompanyId", user.CompanyId.Value.ToString()));
+
+            var token = new JwtSecurityToken(
+                issuer: jwtSettings["Issuer"],
+                audience: jwtSettings["Audience"],
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(double.Parse(jwtSettings["ExpirationInMinutes"]!)),
+                signingCredentials: credentials
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        /// <summary>
+        /// Hachage du mot de passe "from scratch" avec HMACSHA512
+        /// </summary>
+        private void CreatePasswordHash(string password, out string passwordHash, out string passwordSalt)
+        {
+            using var hmac = new HMACSHA512();
+            passwordSalt = Convert.ToBase64String(hmac.Key);
+            passwordHash = Convert.ToBase64String(hmac.ComputeHash(Encoding.UTF8.GetBytes(password)));
+        }
+
+        /// <summary>
+        /// Vérification du mot de passe haché
+        /// </summary>
+        private bool VerifyPasswordHash(string password, string storedHash, string storedSalt)
+        {
+            var saltBytes = Convert.FromBase64String(storedSalt);
+            using var hmac = new HMACSHA512(saltBytes);
+            var computedHash = Convert.ToBase64String(hmac.ComputeHash(Encoding.UTF8.GetBytes(password)));
+            return computedHash == storedHash;
+        }
+    }
+}

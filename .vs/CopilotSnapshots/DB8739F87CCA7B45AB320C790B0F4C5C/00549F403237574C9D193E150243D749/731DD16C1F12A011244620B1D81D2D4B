@@ -1,0 +1,249 @@
+﻿using API.DTOs.Companies;
+using API.Entities.Oltp;
+using API.Repositories.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Cryptography;
+using System.Text;
+
+namespace API.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    [Authorize(Roles = "SuperAdmin")]
+    public class CompaniesController : ControllerBase
+    {
+        private readonly IUnitOfWork _unitOfWork;
+
+        public CompaniesController(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+
+        /// <summary>
+        /// Récupérer toutes les sociétés (SuperAdmin uniquement)
+        /// </summary>
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<CompanyDto>>> GetAll()
+        {
+            var companies = await _unitOfWork.Companies.GetAllAsync();
+            var users = await _unitOfWork.Users.GetAllAsync();
+            var products = await _unitOfWork.Products.GetAllAsync();
+            var categories = await _unitOfWork.Categories.GetAllAsync();
+
+            var dtos = companies.Select(c => new CompanyDto
+            {
+                CompanyId = c.CompanyId,
+                Name = c.Name,
+                Description = c.Description,
+                Address = c.Address,
+                City = c.City,
+                PhoneNumber = c.PhoneNumber,
+                Email = c.Email,
+                LogoUrl = c.LogoUrl,
+                IsActive = c.IsActive,
+                CreatedAt = c.CreatedAt,
+                UserCount = users.Count(u => u.CompanyId == c.CompanyId),
+                ProductCount = products.Count(p => p.CompanyId == c.CompanyId),
+                CategoryCount = categories.Count(cat => cat.CompanyId == c.CompanyId)
+            });
+
+            return Ok(dtos);
+        }
+
+        /// <summary>
+        /// Récupérer une société par ID (SuperAdmin uniquement)
+        /// </summary>
+        [HttpGet("{id}")]
+        public async Task<ActionResult<CompanyDto>> GetById(int id)
+        {
+            var company = await _unitOfWork.Companies.GetByIdAsync(id);
+            if (company == null)
+                return NotFound(new { message = "Société non trouvée." });
+
+            var users = await _unitOfWork.Users.FindAsync(u => u.CompanyId == id);
+            var products = await _unitOfWork.Products.FindAsync(p => p.CompanyId == id);
+            var categories = await _unitOfWork.Categories.FindAsync(c => c.CompanyId == id);
+
+            return Ok(new CompanyDto
+            {
+                CompanyId = company.CompanyId,
+                Name = company.Name,
+                Description = company.Description,
+                Address = company.Address,
+                City = company.City,
+                PhoneNumber = company.PhoneNumber,
+                Email = company.Email,
+                LogoUrl = company.LogoUrl,
+                IsActive = company.IsActive,
+                CreatedAt = company.CreatedAt,
+                UserCount = users.Count(),
+                ProductCount = products.Count(),
+                CategoryCount = categories.Count()
+            });
+        }
+
+        /// <summary>
+        /// Créer une société avec son Admin (SuperAdmin uniquement)
+        /// Un seul objet contenant les infos société + admin
+        /// </summary>
+        [HttpPost]
+        public async Task<ActionResult<API.DTOs.Companies.CompanyWithAdminResponseDto>> Create([FromBody] CreateCompanyDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            // Vérifier si l'email admin existe déjà
+            var existingUser = await _unitOfWork.Users.FindAsync(u => u.Email == dto.AdminEmail);
+            if (existingUser.Any())
+                return BadRequest(new { message = "Un utilisateur avec cet email existe déjà." });
+
+            // Créer la société
+            var company = new Company
+            {
+                Name = dto.Name,
+                Description = dto.Description,
+                Address = dto.Address,
+                City = dto.City,
+                PhoneNumber = dto.PhoneNumber,
+                Email = dto.Email,
+                IsActive = true,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            await _unitOfWork.Companies.AddAsync(company);
+            await _unitOfWork.SaveChangesAsync();
+
+            // Créer l'utilisateur Admin pour cette société
+            CreatePasswordHash(dto.Password, out string passwordHash, out string passwordSalt);
+
+            var adminUser = new User
+            {
+                FirstName = dto.FirstName,
+                LastName = dto.LastName,
+                Email = dto.AdminEmail,
+                PhoneNumber = dto.AdminPhoneNumber,
+                Address = dto.AdminAddress,
+                City = dto.AdminCity,
+                DateOfBirth = dto.DateOfBirth,
+                PasswordHash = passwordHash,
+                PasswordSalt = passwordSalt,
+                Role = "Admin",
+                CompanyId = company.CompanyId,
+                IsActive = true,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            await _unitOfWork.Users.AddAsync(adminUser);
+            await _unitOfWork.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetById), new { id = company.CompanyId }, new API.DTOs.Companies.CompanyWithAdminResponseDto
+            {
+                CompanyId = company.CompanyId,
+                CompanyName = company.Name,
+                CompanyDescription = company.Description,
+                CompanyAddress = company.Address,
+                CompanyCity = company.City,
+                CompanyPhoneNumber = company.PhoneNumber,
+                CompanyEmail = company.Email,
+                CompanyLogoUrl = company.LogoUrl,
+                CompanyIsActive = company.IsActive,
+                CompanyCreatedAt = company.CreatedAt,
+                AdminUserId = adminUser.UserId,
+                AdminFirstName = adminUser.FirstName,
+                AdminLastName = adminUser.LastName,
+                AdminFullName = adminUser.FullName,
+                AdminEmail = adminUser.Email,
+                AdminPhoneNumber = adminUser.PhoneNumber,
+                AdminAddress = adminUser.Address,
+                AdminCity = adminUser.City,
+                AdminRole = adminUser.Role,
+                AdminCreatedAt = adminUser.CreatedAt
+            });
+        }
+
+        /// <summary>
+        /// Mettre à jour une société (SuperAdmin uniquement)
+        /// </summary>
+        [HttpPut("{id}")]
+        public async Task<ActionResult<CompanyDto>> Update(int id, [FromBody] UpdateCompanyDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var company = await _unitOfWork.Companies.GetByIdAsync(id);
+            if (company == null)
+                return NotFound(new { message = "Société non trouvée." });
+
+            company.Name = dto.Name;
+            company.Description = dto.Description;
+            company.Address = dto.Address;
+            company.City = dto.City;
+            company.PhoneNumber = dto.PhoneNumber;
+            company.Email = dto.Email;
+            company.IsActive = dto.IsActive;
+
+            _unitOfWork.Companies.Update(company);
+            await _unitOfWork.SaveChangesAsync();
+
+            var users = await _unitOfWork.Users.FindAsync(u => u.CompanyId == id);
+            var products = await _unitOfWork.Products.FindAsync(p => p.CompanyId == id);
+            var categories = await _unitOfWork.Categories.FindAsync(c => c.CompanyId == id);
+
+            return Ok(new CompanyDto
+            {
+                CompanyId = company.CompanyId,
+                Name = company.Name,
+                Description = company.Description,
+                Address = company.Address,
+                City = company.City,
+                PhoneNumber = company.PhoneNumber,
+                Email = company.Email,
+                LogoUrl = company.LogoUrl,
+                IsActive = company.IsActive,
+                CreatedAt = company.CreatedAt,
+                UserCount = users.Count(),
+                ProductCount = products.Count(),
+                CategoryCount = categories.Count()
+            });
+        }
+
+        /// <summary>
+        /// Supprimer une société (SuperAdmin uniquement)
+        /// </summary>
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var company = await _unitOfWork.Companies.GetByIdAsync(id);
+            if (company == null)
+                return NotFound(new { message = "Société non trouvée." });
+
+            // Vérifier s'il y a des produits ou commandes liés
+            var products = await _unitOfWork.Products.FindAsync(p => p.CompanyId == id);
+            if (products.Any())
+                return BadRequest(new { message = "Impossible de supprimer une société qui contient des produits." });
+
+            // Retirer la société des utilisateurs associés
+            var users = await _unitOfWork.Users.FindAsync(u => u.CompanyId == id);
+            foreach (var user in users)
+            {
+                user.CompanyId = null;
+                _unitOfWork.Users.Update(user);
+            }
+
+            _unitOfWork.Companies.Delete(company);
+            await _unitOfWork.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        // ==================== Méthodes privées ====================
+
+        private static void CreatePasswordHash(string password, out string passwordHash, out string passwordSalt)
+        {
+            using var hmac = new HMACSHA512();
+            passwordSalt = Convert.ToBase64String(hmac.Key);
+            passwordHash = Convert.ToBase64String(hmac.ComputeHash(Encoding.UTF8.GetBytes(password)));
+        }
+    }
+}

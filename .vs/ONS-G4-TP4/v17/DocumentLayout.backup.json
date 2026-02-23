@@ -1,0 +1,543 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ONS-G4-TP4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\controllers\\companiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\controllers\\companiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\dtos\\companies\\companywithadminresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\dtos\\companies\\companywithadminresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\dtos\\companies\\createcompanydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\dtos\\companies\\createcompanydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\services\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\services\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\repositories\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\repositories\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\repositories\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\repositories\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\dtos\\auth\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\dtos\\auth\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\data\\oltpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\data\\oltpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\repositories\\implementations\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\repositories\\implementations\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\dtos\\companies\\updatecompanydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\dtos\\companies\\updatecompanydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\dtos\\companies\\companydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\dtos\\companies\\companydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\dtos\\auth\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\dtos\\auth\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\entities\\oltp\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\entities\\oltp\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\entities\\oltp\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\entities\\oltp\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\entities\\oltp\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\entities\\oltp\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\entities\\oltp\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\entities\\oltp\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\repositories\\implementations\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\repositories\\implementations\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\repositories\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\repositories\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\repositories\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\repositories\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\services\\imageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\services\\imageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\dtos\\categories\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\dtos\\categories\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\dtos\\products\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\dtos\\products\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\controllers\\promotionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\controllers\\promotionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mahdi\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\295288307\\20260220215203_InitOltp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mahdi\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\295288307\\20260220215203_InitOltp.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mahdi\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\295288307\\OltpDbContextModelSnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CompanyWithAdminResponseDto.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\DTOs\\Companies\\CompanyWithAdminResponseDto.cs",
+              "RelativeDocumentMoniker": "API\\DTOs\\Companies\\CompanyWithAdminResponseDto.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\DTOs\\Companies\\CompanyWithAdminResponseDto.cs",
+              "RelativeToolTip": "API\\DTOs\\Companies\\CompanyWithAdminResponseDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T02:30:00.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Repositories\\Implementations\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\Implementations\\UnitOfWork.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Repositories\\Implementations\\UnitOfWork.cs",
+              "RelativeToolTip": "API\\Repositories\\Implementations\\UnitOfWork.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:44:24.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwJcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T19:35:55.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CompaniesController.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Controllers\\CompaniesController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CompaniesController.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Controllers\\CompaniesController.cs",
+              "RelativeToolTip": "API\\Controllers\\CompaniesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:44:48.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateCompanyDto.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\DTOs\\Companies\\CreateCompanyDto.cs",
+              "RelativeDocumentMoniker": "API\\DTOs\\Companies\\CreateCompanyDto.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\DTOs\\Companies\\CreateCompanyDto.cs",
+              "RelativeToolTip": "API\\DTOs\\Companies\\CreateCompanyDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:44:05.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UpdateCompanyDto.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\DTOs\\Companies\\UpdateCompanyDto.cs",
+              "RelativeDocumentMoniker": "API\\DTOs\\Companies\\UpdateCompanyDto.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\DTOs\\Companies\\UpdateCompanyDto.cs",
+              "RelativeToolTip": "API\\DTOs\\Companies\\UpdateCompanyDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:44:10.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IBaseRepository.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Repositories\\Interfaces\\IBaseRepository.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\Interfaces\\IBaseRepository.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Repositories\\Interfaces\\IBaseRepository.cs",
+              "RelativeToolTip": "API\\Repositories\\Interfaces\\IBaseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T02:07:31.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Services\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "API\\Services\\DbInitializer.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Services\\DbInitializer.cs",
+              "RelativeToolTip": "API\\Services\\DbInitializer.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAswBMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:44:58.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Repositories\\Interfaces\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\Interfaces\\IOrderRepository.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Repositories\\Interfaces\\IOrderRepository.cs",
+              "RelativeToolTip": "API\\Repositories\\Interfaces\\IOrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T02:07:32.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OltpDbContext.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Data\\OltpDbContext.cs",
+              "RelativeDocumentMoniker": "API\\Data\\OltpDbContext.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Data\\OltpDbContext.cs",
+              "RelativeToolTip": "API\\Data\\OltpDbContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:43:09.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\DTOs\\Auth\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "API\\DTOs\\Auth\\RegisterDto.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\DTOs\\Auth\\RegisterDto.cs",
+              "RelativeToolTip": "API\\DTOs\\Auth\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:43:17.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "API\\Services\\AuthService.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Services\\AuthService.cs",
+              "RelativeToolTip": "API\\Services\\AuthService.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAWwKEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:43:53.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CompanyDto.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\DTOs\\Companies\\CompanyDto.cs",
+              "RelativeDocumentMoniker": "API\\DTOs\\Companies\\CompanyDto.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\DTOs\\Companies\\CompanyDto.cs",
+              "RelativeToolTip": "API\\DTOs\\Companies\\CompanyDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:43:59.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AuthResponseDto.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\DTOs\\Auth\\AuthResponseDto.cs",
+              "RelativeDocumentMoniker": "API\\DTOs\\Auth\\AuthResponseDto.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\DTOs\\Auth\\AuthResponseDto.cs",
+              "RelativeToolTip": "API\\DTOs\\Auth\\AuthResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:43:25.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Entities\\Oltp\\Category.cs",
+              "RelativeDocumentMoniker": "API\\Entities\\Oltp\\Category.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Entities\\Oltp\\Category.cs",
+              "RelativeToolTip": "API\\Entities\\Oltp\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:42:53.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Entities\\Oltp\\Product.cs",
+              "RelativeDocumentMoniker": "API\\Entities\\Oltp\\Product.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Entities\\Oltp\\Product.cs",
+              "RelativeToolTip": "API\\Entities\\Oltp\\Product.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:42:47.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Entities\\Oltp\\User.cs",
+              "RelativeDocumentMoniker": "API\\Entities\\Oltp\\User.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Entities\\Oltp\\User.cs",
+              "RelativeToolTip": "API\\Entities\\Oltp\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:42:31.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Company.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Entities\\Oltp\\Company.cs",
+              "RelativeDocumentMoniker": "API\\Entities\\Oltp\\Company.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Entities\\Oltp\\Company.cs",
+              "RelativeToolTip": "API\\Entities\\Oltp\\Company.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:42:38.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Repositories\\Implementations\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\Implementations\\ProductRepository.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Repositories\\Implementations\\ProductRepository.cs",
+              "RelativeToolTip": "API\\Repositories\\Implementations\\ProductRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:46:53.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Repositories\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Repositories\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "API\\Repositories\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:44:24.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Repositories\\Interfaces\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "API\\Repositories\\Interfaces\\IProductRepository.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Repositories\\Interfaces\\IProductRepository.cs",
+              "RelativeToolTip": "API\\Repositories\\Interfaces\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:54:46.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ImageService.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Services\\ImageService.cs",
+              "RelativeDocumentMoniker": "API\\Services\\ImageService.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Services\\ImageService.cs",
+              "RelativeToolTip": "API\\Services\\ImageService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:54:31.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "API\\Services\\IAuthService.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Services\\IAuthService.cs",
+              "RelativeToolTip": "API\\Services\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:54:12.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CategoriesController.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "API\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:46:38.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "20260220215203_InitOltp.cs",
+              "DocumentMoniker": "C:\\Users\\mahdi\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\295288307\\20260220215203_InitOltp.cs",
+              "ToolTip": "C:\\Users\\mahdi\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\295288307\\20260220215203_InitOltp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:47:18.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "20260220215203_InitOltp.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\mahdi\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\295288307\\20260220215203_InitOltp.Designer.cs",
+              "ToolTip": "C:\\Users\\mahdi\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\295288307\\20260220215203_InitOltp.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:47:23.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "OltpDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\mahdi\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\295288307\\OltpDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\mahdi\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\295288307\\OltpDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:47:26.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "PromotionsController.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Controllers\\PromotionsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\PromotionsController.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Controllers\\PromotionsController.cs",
+              "RelativeToolTip": "API\\Controllers\\PromotionsController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:47:01.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:47:12.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ProductDto.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\DTOs\\Products\\ProductDto.cs",
+              "RelativeDocumentMoniker": "API\\DTOs\\Products\\ProductDto.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\DTOs\\Products\\ProductDto.cs",
+              "RelativeToolTip": "API\\DTOs\\Products\\ProductDto.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAEBUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:45:37.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "API\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:46:14.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CategoryDto.cs",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\DTOs\\Categories\\CategoryDto.cs",
+              "RelativeDocumentMoniker": "API\\DTOs\\Categories\\CategoryDto.cs",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\DTOs\\Categories\\CategoryDto.cs",
+              "RelativeToolTip": "API\\DTOs\\Categories\\CategoryDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAABYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T01:45:28.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\appsettings.json",
+              "RelativeDocumentMoniker": "API\\appsettings.json",
+              "ToolTip": "D:\\ONS-G4-TP4\\API\\appsettings.json",
+              "RelativeToolTip": "API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-19T19:34:36.117Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+﻿using API.Entities.Oltp;
+
+namespace API.Repositories.Interfaces
+{
+    public interface IUnitOfWork : IDisposable
+    {
+        IProductRepository Products { get; }
+        IOrderRepository Orders { get; }
+        IBaseRepository<Category> Categories { get; }
+        IBaseRepository<OrderItem> OrderItems { get; }
+        IBaseRepository<User> Users { get; }
+        IBaseRepository<Promotion> Promotions { get; }
+        IBaseRepository<Company> Companies { get; }
+        Task<int> SaveChangesAsync();
+    }
+}

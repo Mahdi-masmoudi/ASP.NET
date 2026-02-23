@@ -1,0 +1,59 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace API.DTOs.Companies
+{
+    public class CreateCompanyWithAdminDto
+    {
+        // ----- Informations de la société -----
+        [Required]
+        [StringLength(200)]
+        public string CompanyName { get; set; } = string.Empty;
+
+        [StringLength(500)]
+        public string? CompanyDescription { get; set; }
+
+        [StringLength(300)]
+        public string? CompanyAddress { get; set; }
+
+        [StringLength(100)]
+        public string? CompanyCity { get; set; }
+
+        [Phone]
+        [StringLength(20)]
+        public string? CompanyPhoneNumber { get; set; }
+
+        [EmailAddress]
+        [StringLength(100)]
+        public string? CompanyEmail { get; set; }
+
+        // ----- Informations de l'Admin -----
+        [Required]
+        [StringLength(100)]
+        public string FirstName { get; set; } = string.Empty;
+
+        [Required]
+        [StringLength(100)]
+        public string LastName { get; set; } = string.Empty;
+
+        [Required]
+        [EmailAddress]
+        [StringLength(100)]
+        public string Email { get; set; } = string.Empty;
+
+        [Phone]
+        [StringLength(20)]
+        public string? PhoneNumber { get; set; }
+
+        [StringLength(300)]
+        public string? Address { get; set; }
+
+        [StringLength(100)]
+        public string? City { get; set; }
+
+        public DateTime? DateOfBirth { get; set; }
+
+        [Required]
+        [MinLength(6)]
+        public string Password { get; set; } = string.Empty;
+    }
+}

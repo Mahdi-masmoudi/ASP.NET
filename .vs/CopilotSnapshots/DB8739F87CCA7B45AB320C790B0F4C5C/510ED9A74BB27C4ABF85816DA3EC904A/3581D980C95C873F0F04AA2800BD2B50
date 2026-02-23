@@ -1,0 +1,41 @@
+﻿using API.Data;
+using API.Entities.Oltp;
+using API.Repositories.Interfaces;
+
+namespace API.Repositories.Implementations
+{
+    public class UnitOfWork : IUnitOfWork
+    {
+        private readonly OltpDbContext _context;
+
+        public IProductRepository Products { get; }
+        public IOrderRepository Orders { get; }
+        public IBaseRepository<Category> Categories { get; }
+        public IBaseRepository<OrderItem> OrderItems { get; }
+        public IBaseRepository<User> Users { get; }
+        public IBaseRepository<Promotion> Promotions { get; }
+        public IBaseRepository<Company> Companies { get; }
+
+        public UnitOfWork(OltpDbContext context)
+        {
+            _context = context;
+            Products = new ProductRepository(context);
+            Orders = new OrderRepository(context);
+            Categories = new BaseRepository<Category>(context);
+            OrderItems = new BaseRepository<OrderItem>(context);
+            Users = new BaseRepository<User>(context);
+            Promotions = new BaseRepository<Promotion>(context);
+            Companies = new BaseRepository<Company>(context);
+        }
+
+        public async Task<int> SaveChangesAsync()
+        {
+            return await _context.SaveChangesAsync();
+        }
+
+        public void Dispose()
+        {
+            _context.Dispose();
+        }
+    }
+}

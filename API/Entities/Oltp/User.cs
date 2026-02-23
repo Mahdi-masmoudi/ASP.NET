@@ -1,0 +1,63 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace API.Entities.Oltp
+{
+    public class User
+    {
+        [Key]
+        public int UserId { get; set; }
+
+        [Required]
+        [StringLength(100)]
+        public string FirstName { get; set; } = string.Empty;
+
+        [Required]
+        [StringLength(100)]
+        public string LastName { get; set; } = string.Empty;
+
+        [Required]
+        [StringLength(100)]
+        [EmailAddress]
+        public string Email { get; set; } = string.Empty;
+
+        [Phone]
+        [StringLength(20)]
+        public string? PhoneNumber { get; set; }
+
+        [StringLength(300)]
+        public string? Address { get; set; }
+
+        [StringLength(100)]
+        public string? City { get; set; }
+
+        public DateTime? DateOfBirth { get; set; }
+
+        [StringLength(500)]
+        public string? ProfileImageUrl { get; set; }
+
+        [Required]
+        public string PasswordHash { get; set; } = string.Empty;
+
+        [Required]
+        public string PasswordSalt { get; set; } = string.Empty;
+
+        [Required]
+        [StringLength(20)]
+        public string Role { get; set; } = "User"; // "SuperAdmin", "Admin" or "User"
+
+        public bool IsActive { get; set; } = true;
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        public int? CompanyId { get; set; }
+
+        [ForeignKey("CompanyId")]
+        public virtual Company? Company { get; set; }
+
+        [NotMapped]
+        public string FullName => $"{FirstName} {LastName}";
+
+        public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
+    }
+}
