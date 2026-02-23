@@ -4898,23 +4898,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mahdi\\.nuget\\packages\\": {},
+    "C:\\Users\\Soft-Pro\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\ONS-G4-TP4\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Soft-Pro\\Desktop\\ex\\ASP.NET\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "d:\\ONS-G4-TP4\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\mahdi\\.nuget\\packages\\",
-      "outputPath": "d:\\ONS-G4-TP4\\API\\obj\\",
+      "projectPath": "C:\\Users\\Soft-Pro\\Desktop\\ex\\ASP.NET\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\Soft-Pro\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Soft-Pro\\Desktop\\ex\\ASP.NET\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\mahdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Soft-Pro\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4923,7 +4923,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4994,7 +4993,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

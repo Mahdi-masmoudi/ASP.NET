@@ -5,6 +5,7 @@ using API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.FileProviders;
 using System.Text;
 
 namespace API
@@ -27,6 +28,7 @@ namespace API
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             // ----- Services -----
+            builder.Services.AddHttpContextAccessor();
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IImageService, ImageService>();
 
@@ -156,6 +158,12 @@ namespace API
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(@"C:\imagesAngular\assets\images"),
+                RequestPath = "/assets/images"
+            });
 
             app.UseStaticFiles(); // Servir les fichiers depuis wwwroot/assets/images
             app.UseCors("AllowAll");

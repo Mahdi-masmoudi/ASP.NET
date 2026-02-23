@@ -168,7 +168,7 @@ namespace API.Controllers
             return companyIdClaim != null ? int.Parse(companyIdClaim) : null;
         }
 
-        private static ProductDto MapToDto(Product product)
+        private ProductDto MapToDto(Product product)
         {
             var hasPromo = product.Promotion != null && product.Promotion.IsActive
                 && product.Promotion.StartDate <= DateTime.UtcNow
@@ -181,7 +181,7 @@ namespace API.Controllers
                 Description = product.Description,
                 Price = product.Price,
                 StockQuantity = product.StockQuantity,
-                ImageUrl = product.ImageUrl,
+                ImageUrl = _imageService.ResolveImageUrl(product.ImageUrl),
                 CreatedAt = product.CreatedAt,
                 CategoryId = product.CategoryId,
                 CategoryName = product.Category?.Name ?? string.Empty,

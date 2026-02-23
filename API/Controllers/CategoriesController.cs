@@ -36,7 +36,7 @@ namespace API.Controllers
                 CategoryId = c.CategoryId,
                 Name = c.Name,
                 Description = c.Description,
-                ImageUrl = c.ImageUrl,
+                ImageUrl = _imageService.ResolveImageUrl(c.ImageUrl),
                 CompanyId = c.CompanyId,
                 CompanyName = companies.FirstOrDefault(co => co.CompanyId == c.CompanyId)?.Name ?? string.Empty,
                 ProductCount = products.Count(p => p.CategoryId == c.CategoryId)
@@ -63,7 +63,7 @@ namespace API.Controllers
                 CategoryId = category.CategoryId,
                 Name = category.Name,
                 Description = category.Description,
-                ImageUrl = category.ImageUrl,
+                ImageUrl = _imageService.ResolveImageUrl(category.ImageUrl),
                 CompanyId = category.CompanyId,
                 CompanyName = company?.Name ?? string.Empty,
                 ProductCount = products.Count()
@@ -104,7 +104,7 @@ namespace API.Controllers
                 CategoryId = category.CategoryId,
                 Name = category.Name,
                 Description = category.Description,
-                ImageUrl = category.ImageUrl,
+                ImageUrl = _imageService.ResolveImageUrl(category.ImageUrl),
                 CompanyId = category.CompanyId,
                 CompanyName = company?.Name ?? string.Empty,
                 ProductCount = 0
@@ -150,7 +150,7 @@ namespace API.Controllers
                 CategoryId = category.CategoryId,
                 Name = category.Name,
                 Description = category.Description,
-                ImageUrl = category.ImageUrl,
+                ImageUrl = _imageService.ResolveImageUrl(category.ImageUrl),
                 CompanyId = category.CompanyId,
                 CompanyName = company?.Name ?? string.Empty,
                 ProductCount = products.Count()
