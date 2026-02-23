@@ -151,8 +151,7 @@
               "RelativeToolTip": "API\\DTOs\\Companies\\CompanyWithAdminResponseDto.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwA4AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T02:30:00.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-22T02:30:00.054Z"
             },
             {
               "$type": "Document",
@@ -174,7 +173,7 @@
               "RelativeDocumentMoniker": "API\\Program.cs",
               "ToolTip": "D:\\ONS-G4-TP4\\API\\Program.cs",
               "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwJcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAJcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-19T19:35:55.045Z",
               "EditorCaption": ""
@@ -189,8 +188,7 @@
               "RelativeToolTip": "API\\Controllers\\CompaniesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T01:44:48.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-21T01:44:48.698Z"
             },
             {
               "$type": "Document",
@@ -202,8 +200,7 @@
               "RelativeToolTip": "API\\DTOs\\Companies\\CreateCompanyDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T01:44:05.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-21T01:44:05.511Z"
             },
             {
               "$type": "Document",

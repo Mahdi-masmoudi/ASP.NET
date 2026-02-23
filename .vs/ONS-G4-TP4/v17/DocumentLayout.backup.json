@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\ONS-G4-TP4\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\controllers\\companiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\controllers\\companiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\dtos\\companies\\createcompanydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\dtos\\companies\\createcompanydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7A8B320-EA6C-4B82-9ADE-76DDF39D684B}|API\\API.csproj|d:\\ons-g4-tp4\\api\\services\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -139,11 +139,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CompanyWithAdminResponseDto.cs",
               "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\DTOs\\Companies\\CompanyWithAdminResponseDto.cs",
               "RelativeDocumentMoniker": "API\\DTOs\\Companies\\CompanyWithAdminResponseDto.cs",
@@ -151,8 +151,7 @@
               "RelativeToolTip": "API\\DTOs\\Companies\\CompanyWithAdminResponseDto.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwA4AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T02:30:00.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-22T02:30:00.054Z"
             },
             {
               "$type": "Document",
@@ -168,20 +167,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Program.cs",
               "RelativeDocumentMoniker": "API\\Program.cs",
               "ToolTip": "D:\\ONS-G4-TP4\\API\\Program.cs",
               "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwJcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAJcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-19T19:35:55.045Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CompaniesController.cs",
               "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\Controllers\\CompaniesController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\CompaniesController.cs",
@@ -189,12 +188,11 @@
               "RelativeToolTip": "API\\Controllers\\CompaniesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T01:44:48.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-21T01:44:48.698Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CreateCompanyDto.cs",
               "DocumentMoniker": "D:\\ONS-G4-TP4\\API\\DTOs\\Companies\\CreateCompanyDto.cs",
               "RelativeDocumentMoniker": "API\\DTOs\\Companies\\CreateCompanyDto.cs",
@@ -202,8 +200,7 @@
               "RelativeToolTip": "API\\DTOs\\Companies\\CreateCompanyDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T01:44:05.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-21T01:44:05.511Z"
             },
             {
               "$type": "Document",

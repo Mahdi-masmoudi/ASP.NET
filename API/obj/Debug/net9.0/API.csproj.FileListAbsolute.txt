@@ -166,3 +166,4 @@ d:\ONS-G4-TP4\API\obj\Debug\net9.0\API.genruntimeconfig.cache
 d:\ONS-G4-TP4\API\obj\Debug\net9.0\ref\API.dll
 d:\ONS-G4-TP4\API\bin\Debug\net9.0\API.staticwebassets.runtime.json
 D:\ONS-G4-TP4\API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+D:\ONS-G4-TP4\API\obj\Debug\net9.0\API.sourcelink.json
