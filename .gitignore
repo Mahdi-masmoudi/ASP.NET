@@ -1,0 +1,16 @@
+# Build results
+**/bin/
+**/obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ASP.NET Core
+**/wwwroot/lib/
+
+# Logs
+*.log
