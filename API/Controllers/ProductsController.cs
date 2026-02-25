@@ -89,6 +89,7 @@ namespace API.Controllers
                 StockQuantity = dto.StockQuantity,
                 ImageUrl = imageUrl,
                 CategoryId = dto.CategoryId,
+                PromotionId = dto.PromotionId,
                 CompanyId = companyId.Value,
                 CreatedAt = DateTime.UtcNow
             };
@@ -130,6 +131,7 @@ namespace API.Controllers
             product.Price = dto.Price;
             product.StockQuantity = dto.StockQuantity;
             product.CategoryId = dto.CategoryId;
+            product.PromotionId = dto.PromotionId;
 
             _unitOfWork.Products.Update(product);
             await _unitOfWork.SaveChangesAsync();

@@ -23,5 +23,7 @@ namespace API.DTOs.Products
 
         [Required]
         public int CategoryId { get; set; }
+
+        public int? PromotionId { get; set; }
     }
 }
